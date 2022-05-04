@@ -66,4 +66,5 @@ subgraph CPU
     ULA -. value_regd .-> RB;
 end
 ```
-	- Descrição: Neste projeto consideramos o Processador simplificado implementado acima e adicionamos um operador de subtração e uma configuração automática de instruções e valores para o banco de registradores por meio da leitura de arquivos .txt.
+
+   - Descrição: Neste projeto consideramos o Processador simplificado implementado acima e adicionamos um operador de subtração e uma configuração automática de instruções e valores para o banco de registradores por meio da leitura de arquivos .txt.
