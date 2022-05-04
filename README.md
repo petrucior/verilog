@@ -52,3 +52,18 @@ subgraph Instruction
     instruction[Opcode - addr_regd - addr_reg1 - addr_reg2 - shamp - funct];
 end
 ```
+
+- [Processador simplificado (versão 2)](https://github.com/petrucior/verilog/blob/main/processador_v2.ipynb)
+```mermaid
+flowchart TB;
+subgraph CPU
+    PC --> IM[(Instructions_memory)];
+	setIM(instructions.txt) --> IM;
+    IM -. addr_regd, addr_reg1, addr_reg2 .-> RB[(Register_Bank)];
+	setRB(registers.txt) --> RB;
+    IM -- Opcode --> ULA[\ULA/];
+    RB -. value_reg1, value_reg2 .-> ULA[\ULA/];
+    ULA -. value_regd .-> RB;
+end
+```
+	- Descrição: Neste projeto consideramos o Processador simplificado implementado acima e adicionamos um operador de subtração e uma configuração automática de instruções e valores para o banco de registradores por meio da leitura de arquivos .txt.
